@@ -11,14 +11,14 @@ def test_config_directory(host):
 
 
 def test_telegraf_service(host):
-    """Check telegraf service"""
+    """Check Telegraf service"""
     s = host.service("telegraf")
     assert s.is_running
     assert s.is_enabled
 
 
 def test_telegraf_docker_container(host):
-    """Check telegraf docker container"""
+    """Check Telegraf docker container"""
     d = host.docker("telegraf.service").inspect()
     assert d["HostConfig"]["Memory"] == 1073741824
     assert d["Config"]["Image"] == "telegraf:latest"
