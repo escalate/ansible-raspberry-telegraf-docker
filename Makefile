@@ -35,6 +35,7 @@ destroy:
 .PHONY: version
 version:
 	ansible --version
+	ansible-lint --version
 	ec --version
 	flake8 --version
 	molecule --version
