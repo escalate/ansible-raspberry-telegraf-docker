@@ -23,6 +23,7 @@ telegraf_config: |
   # Read metrics about disk usage by mount point
   # https://github.com/influxdata/telegraf/blob/master/plugins/inputs/disk/README.md
   [[inputs.disk]]
+    ignore_fs = ["nsfs"]
 
   # Read metrics about disk IO by device
   # https://github.com/influxdata/telegraf/blob/master/plugins/inputs/diskio/README.md
