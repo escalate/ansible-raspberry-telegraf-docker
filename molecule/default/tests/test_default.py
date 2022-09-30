@@ -56,11 +56,11 @@ def test_telegraf_metrics(host):
     input = host.run((
         "curl --request POST --data-binary "
         "'molecule_test,host=localhost value=1 1434055562000000000' "
-        "http://127.0.0.1:8080/telegraf"
+        "http://localhost:8080/telegraf"
 
     ))
     assert input.succeeded
 
-    output = host.run("curl http://127.0.0.1:9273/metrics")
+    output = host.run("curl http://localhost:9273/metrics")
     assert output.succeeded
     assert 'molecule_test_value{host="localhost"} 1' in output.stdout
