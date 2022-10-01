@@ -41,7 +41,7 @@ def test_telegraf_service(host):
 
 def test_telegraf_docker_container(host):
     """Check Telegraf docker container"""
-    d = host.docker("telegraf.service").inspect()
+    d = host.docker("telegraf").inspect()
     assert d["HostConfig"]["Memory"] == 1073741824
     assert d["Config"]["Image"] == "telegraf:latest"
     assert d["Config"]["Labels"]["maintainer"] == "me@example.com"
