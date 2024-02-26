@@ -1,14 +1,8 @@
-[![Molecule](https://github.com/escalate/ansible-raspberry-telegraf-docker/actions/workflows/molecule.yml/badge.svg?branch=master&event=push)](https://github.com/escalate/ansible-raspberry-telegraf-docker/actions/workflows/molecule.yml)
+[![Test](https://github.com/escalate/ansible-raspberry-telegraf-docker/actions/workflows/test.yml/badge.svg?branch=master&event=push)](https://github.com/escalate/ansible-raspberry-telegraf-docker/actions/workflows/test.yml)
 
 # Ansible Role: Raspberry - Telegraf (Docker)
 
 An Ansible role that manages [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) Docker container with systemd on Raspberry Pi OS (Debian Bookworm).
-
-## Install
-
-```
-$ ansible-galaxy install escalate.telegraf
-```
 
 ## Role Variables
 
@@ -20,6 +14,12 @@ This role relies on the following dependencies:
 
 * Roles: [requirements.yml](https://github.com/escalate/ansible-raspberry-telegraf-docker/blob/master/requirements.yml)
 * Collections: [requirements.yml](https://github.com/escalate/ansible-raspberry-telegraf-docker/blob/master/requirements.yml)
+
+## Installation
+
+```
+$ ansible-galaxy role install escalate.telegraf
+```
 
 ## Example Playbook
 
