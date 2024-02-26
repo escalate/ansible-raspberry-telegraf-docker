@@ -2,7 +2,7 @@
 
 # Ansible Role: Raspberry - Telegraf (Docker)
 
-An Ansible role that manages [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) Docker container with systemd on Raspberry Pi OS (Debian Bullseye).
+An Ansible role that manages [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) Docker container with systemd on Raspberry Pi OS (Debian Bookworm).
 
 ## Install
 
