@@ -12,7 +12,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0755
+    mode: "0755"
 
 - name: Create service configuration
   ansible.builtin.template:
@@ -20,7 +20,7 @@
     dest: "{{ telegraf_etc_path }}/telegraf.conf"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   no_log: true
   notify: Restart telegraf service
 
@@ -30,7 +30,7 @@
     dest: /etc/telegraf.env
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify: Restart telegraf service
 
 - name: Define Docker container labels
@@ -39,7 +39,7 @@
     dest: /etc/telegraf.label
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify: Restart telegraf service
 
 - name: Pull Docker image
@@ -53,7 +53,7 @@
     dest: /etc/systemd/system/telegraf.service
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify: Restart telegraf service
 
 - name: Start service
